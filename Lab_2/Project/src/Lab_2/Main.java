@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main
 {
     static Scanner input;
+    static Matrix mObject;
     public static void main(String[] args)
     {
         input = new Scanner(System.in);
@@ -12,14 +13,8 @@ public class Main
     }
     static void matrixTask()
     {
-        int[][] matrix = new int[5][5];
-        System.out.print("Далее строка за строкой введите матрицу размерностью 5x5:\n");
-        for (int i = 0; i < 5; i++)
-            for (int j = 0; j < 5; j++)
-                matrix[j][i] = input.nextInt();
-        Matrix mObject = new Matrix(matrix);
-        System.out.print("Выберите изменяемую строку(2-5):\n");
-        mObject.multiplyLine(input.nextInt() - 1);
+        mObject = Matrix.buildMatrix();
+        mObject.multiplyLine();
         mObject.printMatrix();
     }
     static void calculateTask()
