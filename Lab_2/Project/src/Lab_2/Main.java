@@ -1,35 +1,31 @@
 package Lab_2;
-import java.util.Scanner;
 public class Main
 {
-    static Scanner input;
-    static Matrix mObject;
+    private static Matrix mObject;
+    private static Calculator cObject;
+    private static Words wObject;
     public static void main(String[] args)
     {
-        input = new Scanner(System.in);
         matrixTask();
         calculateTask();
         wordsTask();
     }
-    static void matrixTask()
+    private static void matrixTask()
     {
         mObject = Matrix.buildMatrix();
         mObject.multiplyLine();
         mObject.printMatrix();
     }
-    static void calculateTask()
+    private static void calculateTask()
     {
-        System.out.print("Через пробел введите два рабочих числа: ");
-        Calculator calculator = new Calculator(input.nextDouble(), Double.parseDouble(input.nextLine()));
-        System.out.print("Введите знак операции: ");
-        calculator.setOperation(input.nextLine());
-        System.out.print(calculator.answer());
+        cObject = Calculator.buildCalculator();
+        System.out.print(cObject.answer());
     }
-    static void wordsTask()
+    private static void wordsTask()
     {
-        System.out.print("Введите обрабатываемые слова через пробел или запятую: ");
-        Words words = new Words(input.nextLine());
-        words.print();
+        wObject = new Words();
+        wObject.doTask();
+        wObject.print();
     }
 
 }

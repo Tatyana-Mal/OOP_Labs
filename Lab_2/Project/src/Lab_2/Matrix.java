@@ -5,20 +5,22 @@ import java.util.Scanner;
 
 public class Matrix implements Serializable
 {
-    static Scanner input;
+    private static Scanner input = new Scanner(System.in);
     private int[][] matrix;
-    private int[][] example = {{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5}};
     public Matrix()
     {
-        matrix = example;
+        matrix = new int[5][5];
+        for (int i = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++)
+                matrix[i][j] = j;
     }
     public Matrix(int[][] array)
     {
         matrix = array;
     }
-    public Matrix(String Name)
+    public Matrix(String name)
     {
-        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(Name + ".mx")))
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(name + ".mx")))
         {
             Matrix temp = (Matrix)ois.readObject();
             matrix = temp.matrix;
@@ -26,7 +28,10 @@ public class Matrix implements Serializable
         catch(Exception exception)
         {
             System.out.println("Объект с указанным именем не найден. Создаю базовый экземпляр.");
-            matrix = example;
+            matrix = new int[5][5];
+            for (int i = 0; i < 5; i++)
+                for (int j = 0; j < 5; j++)
+                    matrix[i][j] = j;
         }
     }
     public void multiplyLine()
@@ -46,9 +51,9 @@ public class Matrix implements Serializable
             System.out.print('\n');
         }
     }
-    public void saveAs(String Name)
+    public void saveAs(String name)
     {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(Name + ".mx")))
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(name + ".mx")))
         {
             oos.writeObject(this);
         }
@@ -63,25 +68,11 @@ public class Matrix implements Serializable
     }
     public static Matrix buildMatrix()
     {
-        input = new Scanner(System.in);
         int[][] mx = new int[5][5];
         System.out.print("Далее строка за строкой введите матрицу размерностью 5x5:\n");
         for (int i = 0; i < 5; i++)
             for (int j = 0; j < 5; j++)
                 mx[i][j] = input.nextInt();
         return new Matrix(mx);
-    }
-    public static void printModified(int[][] array, int line)
-    {
-        System.out.print("Ваша матрица:\n");
-        for (int i = 0; i < 5; i++)
-        {
-            if (i == line)
-                for (int j = 0; j < 5; j++)
-                    array[i][j] *= array[0][j];
-            for (int j = 0; j < 5; j++)
-                System.out.print(array[i][j] + " ");
-            System.out.print('\n');
-        }
     }
 }
