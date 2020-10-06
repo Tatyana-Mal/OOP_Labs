@@ -47,7 +47,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -94,10 +94,11 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="94" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1600953664672" />
-    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1600959434065">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="630" y="261" key="FileChooserDialogImpl" timestamp="1601996743163">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1600959434065" />
+    <state x="630" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601996743163" />
     <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1601616225148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -118,9 +119,9 @@
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1600961712745" />
     <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601616225148" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1601612381631">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1601996787854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601612381631" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601996787854" />
   </component>
 </project>
