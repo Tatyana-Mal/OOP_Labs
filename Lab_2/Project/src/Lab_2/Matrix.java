@@ -1,8 +1,6 @@
 package Lab_2;
-
 import java.io.*;
 import java.util.Scanner;
-
 public class Matrix implements Serializable
 {
     private static Scanner input = new Scanner(System.in);

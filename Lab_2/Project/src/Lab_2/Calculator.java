@@ -1,7 +1,6 @@
 package Lab_2;
 import java.io.*;
 import java.util.Scanner;
-
 public class Calculator implements Serializable
 {
     private double a;

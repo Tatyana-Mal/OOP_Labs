@@ -1,7 +1,6 @@
 package Lab_2;
 import java.io.*;
 import java.util.Scanner;
-
 public class Words implements Serializable
 {
     private String line;
@@ -57,7 +56,6 @@ public class Words implements Serializable
             {
                 buffer[counter] = buffer[i];
                 counter++;
-                System.out.println("counter = " + counter);
             }
         array = new String[counter];
         for (int i = 0; i < counter; i++)
